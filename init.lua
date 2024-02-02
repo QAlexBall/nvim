@@ -43,3 +43,5 @@ vim.api.nvim_create_user_command("LZ", "Lazy", {})
 
 -- for auto update colorscheme, always keep this at the last line
 vim.cmd.colorscheme "catppuccin-latte"
+-- vim.cmd.colorscheme "tokyonight"
+-- vim.cmd.colorscheme "onedark"
