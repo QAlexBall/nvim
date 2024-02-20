@@ -1,5 +1,11 @@
 -- Author: Chris Zhu
 
+-- disable netrw at the very start of your init.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
+-- optionally enable 24-bit colour
+vim.opt.termguicolors = true
+
 -- Lazy Installation
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -39,9 +45,13 @@ local opts = {
   },
 }
 require("lazy").setup(opts)
+require("nvim-tree").setup({})
 vim.api.nvim_create_user_command("LZ", "Lazy", {})
 
 -- for auto update colorscheme, always keep this at the last line
 vim.cmd.colorscheme "catppuccin-latte"
 -- vim.cmd.colorscheme "tokyonight"
 -- vim.cmd.colorscheme "onedark"
+--
+
+
