@@ -45,7 +45,8 @@ local opts = {
   },
 }
 require("lazy").setup(opts)
-require("nvim-tree").setup({})
+require('lspconfig').pyright.setup{}
+-- require("nvim-tree").setup({})
 vim.api.nvim_create_user_command("LZ", "Lazy", {})
 
 -- for auto update colorscheme, always keep this at the last line
